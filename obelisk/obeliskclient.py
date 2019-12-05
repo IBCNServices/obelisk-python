@@ -54,7 +54,7 @@ class Obelisk:
             headers = {'Content-Type': 'application/x-www-form-urlencoded'}
             body = 'grant_type=client_credentials'
             r = requests.post("{}/auth/realms/idlab-iot/protocol/openid-connect/token".format(self._base_url), data=body,
-                            auth=HTTPBasicAuth(self._client_id, self._client_secret), headers=headers, timeout=10)
+                              auth=HTTPBasicAuth(self._client_id, self._client_secret), headers=headers, timeout=10)
             r.raise_for_status()
             message = r.json()
             return message['access_token']
@@ -76,7 +76,7 @@ class Obelisk:
                 'audience': 'policy-enforcer',
             }
             r = requests.post("{}/auth/realms/idlab-iot/protocol/openid-connect/token".format(self._base_url), data=payload,
-                            headers=headers, timeout=10)
+                              headers=headers, timeout=10)
             r.raise_for_status()
             message = r.json()
             self._rpt_token = message['access_token']
@@ -118,7 +118,7 @@ class Obelisk:
                 else:
                     self.__refresh_rpt_token()
             headers = {'Content-Type': 'application/json',
-                    'Authorization': 'Bearer {}'.format(self._rpt_token)}
+                       'Authorization': 'Bearer {}'.format(self._rpt_token)}
             url = "{}/api/{}/scopes/{}/ingest?precision={}".format(
                 self._base_url, self._version, self._scope_id, obelisk_precisions[self._precision])
             resp = requests.post(url, json=data, headers=headers, timeout=10)
@@ -129,4 +129,4 @@ class Obelisk:
                 resp.raise_for_status()
         except requests.exceptions.HTTPError as e:
             logger.error(e)
-            raise ObeliskError("Could not send data to Obelisk.")            
+            raise ObeliskError("Could not send data to Obelisk.")

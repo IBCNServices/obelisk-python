@@ -1,4 +1,3 @@
-# from ObeliskClient import Obelisk, ObeliskError
 from obelisk.obeliskclient import Obelisk, ObeliskError, ObeliskPrecisions
 
 import logging
@@ -9,7 +8,7 @@ logging.getLogger(__name__).addHandler(NullHandler())
 __all__ = [
     Obelisk,
     ObeliskError,
-    ObeliskPrecisions
+    ObeliskPrecisions,
 ]
 
 __version__ = '0.0.1'
