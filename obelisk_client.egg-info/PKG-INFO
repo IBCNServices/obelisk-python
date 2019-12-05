@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: obelisk-client
+Version: 0.0.1
+Summary: Client library for Obelisk.
+Home-page: https://github.com/tengu-team/obelisk-client
+Author: Sander Borny
+Author-email: sander.borny@ugent.be
+License: UNKNOWN
+Description: # Obelisk Python Client
+        
+        Client library for the [Obelisk project](https://obelisk.ilabt.imec.be).
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
