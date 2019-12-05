@@ -1,9 +1,0 @@
-README.md
-setup.py
-obelisk/__init__.py
-obelisk/obeliskclient.py
-obelisk_client.egg-info/PKG-INFO
-obelisk_client.egg-info/SOURCES.txt
-obelisk_client.egg-info/dependency_links.txt
-obelisk_client.egg-info/requires.txt
-obelisk_client.egg-info/top_level.txt
